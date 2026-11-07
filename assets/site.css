@@ -45,19 +45,6 @@ li { margin-bottom: 4px; }
 a { color: var(--accent); }
 .meta { color: var(--muted); font-size: 14px; }
 
-.lang {
-  display: flex;
-  gap: 8px;
-  margin: 16px 0 0;
-}
-.lang a {
-  padding: 4px 12px;
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
 section.policy {
   background: var(--surface);
   border: 1px solid var(--line);
