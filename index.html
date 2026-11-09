@@ -3,29 +3,56 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>koyhl games</title>
-  <meta name="description" content="koyhl makes small, colourful puzzle games for Android and iOS.">
-  <meta name="theme-color" content="#ffe4ec" media="(prefers-color-scheme: light)">
-  <meta name="theme-color" content="#17143d" media="(prefers-color-scheme: dark)">
-  <link rel="icon" type="image/png" href="/assets/favicon.png">
+  <title>KoyHL Studio</title>
+  <meta name="description" content="KoyHL Studio is an independent game studio making games for phones and beyond.">
+  <meta name="theme-color" content="#010322">
+  <meta property="og:title" content="KoyHL Studio">
+  <meta property="og:description" content="An independent game studio making games for phones and beyond.">
+  <meta property="og:image" content="https://koyhl.github.io/assets/brand/hero-1600.jpg">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/png" href="/assets/brand/favicon.png">
+  <link rel="apple-touch-icon" href="/assets/brand/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lilita+One&family=Rubik:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/assets/site.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Rubik:wght@400;500&display=swap">
+  <link rel="stylesheet" href="/assets/home.css">
+  <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
-  <header class="wrap top">
-    <a class="mark" href="/">koyhl</a>
-    <nav aria-label="Main">
-      <a href="#games">Games</a>
-      <a href="#contact">Contact</a>
-    </nav>
+  <header class="top" id="top">
+    <div class="wrap top-inner">
+      <a class="brand" href="/" aria-label="KoyHL Studio home"><img src="/assets/brand/mark.png" alt="" width="38" height="38"></a>
+      <nav aria-label="Main">
+        <a href="#studio">Studio</a>
+        <a href="#games">Games</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
   </header>
 
   <main>
-    <div class="wrap hero">
-      <figure class="screen" aria-hidden="true">
-        <div class="board">
+    <div class="hero">
+      <picture>
+        <source type="image/webp" srcset="/assets/brand/hero-1280.webp 1280w, /assets/brand/hero-2400.webp 2400w" sizes="100vw">
+        <img src="/assets/brand/hero-1600.jpg" alt="KoyHL Studio" width="1600" height="900" fetchpriority="high">
+      </picture>
+    </div>
+
+    <div class="wrap intro">
+      <p class="eyebrow">Independent game studio</p>
+      <h1>Games made to <span class="glow">play, share and come back to.</span></h1>
+      <p class="lede">We are a small independent team building games for phones and beyond.
+        One genre today, a different one tomorrow: if it feels good to play, we want to make it.</p>
+      <div class="cta">
+        <a class="button primary" href="#games">See our games</a>
+        <a class="button ghost" href="#contact">Get in touch</a>
+      </div>
+    </div>
+
+    <section class="wrap" id="studio" aria-labelledby="studio-title">
+      <div class="studio-grid">
+        <figure class="screen reveal" aria-hidden="true">
+        <div class="board" id="wordmark">
         <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
         <i></i><i class="b coral" style="--n:0"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="b mint" style="--n:3"></i><i></i><i></i><i></i><i class="b sky" style="--n:4"></i><i></i><i></i><i></i>
         <i></i><i class="b coral" style="--n:0"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="b mint" style="--n:3"></i><i></i><i></i><i></i><i class="b sky" style="--n:4"></i><i></i><i></i><i></i>
@@ -35,41 +62,110 @@
         <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i class="b yellow" style="--n:2"></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
         <i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i>
         </div>
-      </figure>
-      <h1>Small puzzle games, made one block at a time.</h1>
-      <p class="lede">koyhl is an independent developer making bright, casual games for Android and
-        iOS. Easy to pick up for a minute, hard to put down.</p>
-    </div>
+        </figure>
+        <div class="reveal">
+          <p class="eyebrow">The studio</p>
+          <h2 id="studio-title">Small studio, open playground.</h2>
+          <p class="section-lede" style="margin-bottom:0">Every game starts with one simple idea that feels good in
+            your hands, and grows from there. We are not tied to a single genre, so expect a little of everything.</p>
+          <ul class="values">
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#22f0c4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2 4 14h7l-1 8 9-12h-7z"/></svg></span>
+              <div><h3>Easy to start</h3><p>Learn in seconds, play for a minute or an hour.</p></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#2fc8ff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l2.6 5.6 6 .7-4.5 4.1 1.2 6L12 16.4 6.7 19.4l1.2-6L3.4 9.3l6-.7z"/></svg></span>
+              <div><h3>Made with care</h3><p>Polished details, smooth play and regular updates.</p></div>
+            </li>
+            <li>
+              <span class="dot"><svg viewBox="0 0 24 24" fill="none" stroke="#e61cff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 5 6v5c0 4.5 3 8.3 7 10 4-1.7 7-5.5 7-10V6z"/><path d="m9 12 2 2 4-4"/></svg></span>
+              <div><h3>Fair to players</h3><p>No tricks, clear choices and respect for your privacy.</p></div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
 
     <section class="wrap" id="games" aria-labelledby="games-title">
-      <h2 id="games-title">Games</h2>
-      <article class="game">
-        <img src="/assets/games/blockpuzzle.png" alt="Block Puzzle app icon" width="112" height="112">
-        <div>
-          <h3>Block Puzzle</h3>
-          <p>Drop colourful blocks onto the board and clear full rows and columns before you run out
-            of space. Play a new daily challenge every day, get out of tight spots with rotate, bomb
-            and undo, and switch between light and dark themes.</p>
-          <div class="actions">
-            <span class="button soon">Coming soon to Google Play</span>
-            <a href="/privacy/blockpuzzle/">Privacy policy</a>
-            <a href="/terms/blockpuzzle/">Terms of service</a>
+      <p class="eyebrow">Our games</p>
+      <h2 id="games-title">What we are playing with.</h2>
+      <p class="section-lede">A growing collection. Each one is free to download and built to be enjoyed anywhere.</p>
+      <div class="games">
+        <article class="card reveal">
+          <div class="card-head">
+            <img src="/assets/games/blockpuzzle.png" alt="Block Puzzle app icon" width="84" height="84">
+            <div>
+              <h3>Block Puzzle</h3>
+              <div class="tags"><span class="tag">Puzzle</span><span class="tag live">Coming soon</span></div>
+            </div>
           </div>
-        </div>
-      </article>
+          <p>Place colourful blocks, clear rows and columns, and take on a new daily challenge every day.</p>
+          <div class="links">
+            <span class="store">Coming soon to Google Play</span>
+            <a href="/privacy/blockpuzzle/">Privacy</a>
+            <a href="/terms/blockpuzzle/">Terms</a>
+          </div>
+        </article>
+        <article class="card next reveal">
+          <div class="slot" aria-hidden="true"><span>?</span></div>
+          <div>
+            <h3>Next project</h3>
+            <div class="tags"><span class="tag">In development</span></div>
+          </div>
+          <p>Something new is on the way. A different kind of game, made with the same care.</p>
+        </article>
+      </div>
     </section>
 
     <section class="wrap contact" id="contact" aria-labelledby="contact-title">
-      <h2 id="contact-title">Contact</h2>
-      <p>Questions, bug reports and privacy requests are all welcome.</p>
-      <a class="email" href="mailto:xuantv199x@gmail.com">xuantv199x@gmail.com</a>
+      <p class="eyebrow">Contact</p>
+      <h2 id="contact-title">Say hello.</h2>
+      <p class="section-lede">Feedback, bug reports, partnerships or privacy requests: every message gets read.</p>
+      <a class="email glow" href="mailto:xuantv199x@gmail.com">xuantv199x@gmail.com</a>
     </section>
   </main>
 
   <footer class="wrap">
-    <span>&copy; 2026 koyhl</span>
-    <a href="/privacy/blockpuzzle/">Block Puzzle privacy policy</a>
-    <a href="/terms/blockpuzzle/">Block Puzzle terms</a>
+    <span>&copy; 2026 KoyHL Studio</span>
   </footer>
+
+  <a class="to-top" href="#" id="to-top" aria-label="Back to top">
+    <svg viewBox="0 0 24 24" fill="none" stroke="url(#neon)" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <defs><linearGradient id="neon" x1="0" y1="1" x2="1" y2="0"><stop offset="0" stop-color="#22f0c4"/><stop offset="0.5" stop-color="#7b5cff"/><stop offset="1" stop-color="#e61cff"/></linearGradient></defs>
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </a>
+
+  <script>
+    (function () {
+      var top = document.getElementById("top");
+      var toTop = document.getElementById("to-top");
+      var onScroll = function () {
+        top.classList.toggle("scrolled", window.scrollY > 24);
+        toTop.classList.toggle("show", window.scrollY > 600);
+      };
+      toTop.addEventListener("click", function (e) {
+        e.preventDefault();
+        window.scrollTo({ top: 0 });
+      });
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+    })();
+    (function () {
+      var targets = document.querySelectorAll(".reveal, #wordmark");
+      if (!("IntersectionObserver" in window)) {
+        targets.forEach(function (el) { el.classList.add("in", "play"); });
+        return;
+      }
+      var io = new IntersectionObserver(function (entries) {
+        entries.forEach(function (e) {
+          if (!e.isIntersecting) return;
+          e.target.classList.add(e.target.id === "wordmark" ? "play" : "in");
+          io.unobserve(e.target);
+        });
+      }, { threshold: 0.25 });
+      targets.forEach(function (el) { io.observe(el); });
+    })();
+  </script>
 </body>
 </html>
