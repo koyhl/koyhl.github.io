@@ -15,7 +15,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Outfit:wght@500;600;700&family=Rubik:wght@400;500&display=swap">
-  <link rel="stylesheet" href="/assets/home.css">
+  <link rel="stylesheet" href="/assets/site.css">
   <script>document.documentElement.classList.add("js")</script>
 </head>
 <body>
@@ -136,36 +136,6 @@
     </svg>
   </a>
 
-  <script>
-    (function () {
-      var top = document.getElementById("top");
-      var toTop = document.getElementById("to-top");
-      var onScroll = function () {
-        top.classList.toggle("scrolled", window.scrollY > 24);
-        toTop.classList.toggle("show", window.scrollY > 600);
-      };
-      toTop.addEventListener("click", function (e) {
-        e.preventDefault();
-        window.scrollTo({ top: 0 });
-      });
-      window.addEventListener("scroll", onScroll, { passive: true });
-      onScroll();
-    })();
-    (function () {
-      var targets = document.querySelectorAll(".reveal, #wordmark");
-      if (!("IntersectionObserver" in window)) {
-        targets.forEach(function (el) { el.classList.add("in", "play"); });
-        return;
-      }
-      var io = new IntersectionObserver(function (entries) {
-        entries.forEach(function (e) {
-          if (!e.isIntersecting) return;
-          e.target.classList.add(e.target.id === "wordmark" ? "play" : "in");
-          io.unobserve(e.target);
-        });
-      }, { threshold: 0.25 });
-      targets.forEach(function (el) { io.observe(el); });
-    })();
-  </script>
+  <script src="/assets/site.js"></script>
 </body>
 </html>
