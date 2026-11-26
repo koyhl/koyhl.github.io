@@ -28,3 +28,34 @@
   }, { threshold: 0.25 });
   targets.forEach(function (el) { io.observe(el); });
 })();
+// Email links: the address is put together only when used, so it never appears in the page source.
+(function () {
+  var address = function (el) {
+    return el.getAttribute("data-mail-user") + "@" + el.getAttribute("data-mail-domain");
+  };
+  document.querySelectorAll("[data-mail-user]").forEach(function (el) {
+    if (el.hasAttribute("data-mail-copy")) {
+      var label = el.textContent;
+      var timer;
+      el.addEventListener("click", function () {
+        var done = function (text) {
+          el.textContent = text;
+          clearTimeout(timer);
+          timer = setTimeout(function () { el.textContent = label; }, 2500);
+        };
+        if (navigator.clipboard && window.isSecureContext) {
+          navigator.clipboard.writeText(address(el)).then(
+            function () { done("Copied!"); },
+            function () { done(address(el)); }
+          );
+        } else {
+          done(address(el));
+        }
+      });
+      return;
+    }
+    el.addEventListener("click", function () {
+      el.href = "mailto:" + address(el);
+    });
+  });
+})();
